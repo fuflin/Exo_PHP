@@ -2,7 +2,7 @@
 
 <?php
 
-// exo 1 //
+// exo 1 créer une fonction personnalisée permettant de transformer une chaîne de caractère passée en argument en majuscule et en rouge
 
 echo "Exo 1 <br>";
 echo "<br>";
@@ -30,7 +30,7 @@ echo convertirMajRed1($text2);
 echo "<br>";
 
 
-// exo 2 //
+// exo 2 afficher un tableau HTML avec nom de pays par ordre alphabétique grâce à une fonction 
 
 
 $capitales = array (
@@ -70,7 +70,7 @@ function table($capitales)
 echo table($capitales);
 
 
-// exo 3 //
+// exo 3 afficher un lien hypertexte Elan ouvert dans nouvel onglet
 
 echo "Exo 3 <br>";
 echo "<br>";
@@ -81,7 +81,7 @@ echo '<a href="https://elan-formation.eu/accueil" target="_blank">Elan Formation
 echo "<br>";
 echo "<br>";
 
-// exo 4 //
+// exo 4 à partir de l'exo 2 ajouter un lien HTML pour chaque capital
 
 $capitales = array (
     "France" => "Paris", 
@@ -128,7 +128,7 @@ echo "<br>";
 echo "<br>";
 
 
-// exo 5 //
+// exo 5 créer une fonction perso pour afficher un champ de texte
 
 
 echo "Exo 5 ";
@@ -150,7 +150,7 @@ echo afficherNoms($nomsInput);
 echo "<br>";
 echo "<br>";
 
-// exo 6 //
+// exo 6 créer une fonction pour une liste déroulante
 
 echo "Exo 6";
 echo "<br>";
@@ -175,7 +175,7 @@ echo listeDeroulante($elements);
 echo "<br>";
 echo "<br>";
 
-// exo 7 //
+// exo 7 créer une fonction pour générer des cases à cocher
 
 echo "Exo 7";
 echo "<br>";
@@ -185,7 +185,7 @@ echo "Choix des répliques à utilisées pour la partie : <br>";
 echo "<br>";
 
 $repliques = array (
-                "HK-416" => "",
+                "HK-416" => "",// 
                 "Glock"=>"checked",
                 "Ak-47"=>"", 
                 "P90"=>"", 
@@ -214,7 +214,7 @@ echo "<br>";
 echo "<br>";
 
 
-// exo 8 //
+// exo 8 créer une fonction pour afficher N fois une image
 
 echo "Exo 8";
 echo "<br>";
@@ -240,7 +240,7 @@ echo nombreimg ();
 echo "<br>";
 echo "<br>";
 
-// exo 9 //
+// exo 9 créer une fonction pour afficher des boutons radios 
 
 echo "Exo 9";
 echo "<br>";
@@ -261,7 +261,7 @@ echo nomsRadio($noms);
 echo "<br>";
 echo "<br>";
 
-// exo 10 //
+// exo 10 en utilisant l'ensemble des exos précédent faire une liste de tout
 
 echo "Exo 10";
 echo "<br>";
@@ -297,7 +297,7 @@ echo "<input type='submit' value='Valider' />"; // commande du bouton de validat
 echo "<br>";
 echo "<br>";
 
-// exo 11 //
+// exo 11 ecrire une fonction permettant d'afficher une date en fr à partir d'une chaîne de caractère
 
 echo "Exo 11";
 echo "<br>";
@@ -314,7 +314,7 @@ echo $date -> format ('l jS \o\f F Y');
 echo "<br>";
 echo "<br>";
 
-exo 12 // 
+// exo 12 à l'aide d'une boucle afficher les infos des variables contenu dans le tableau
 
 echo "Exo 12";
 echo "<br>";
@@ -331,7 +331,7 @@ echo "<br>";
 echo "<br>";
 
 
-exo 13 //
+// exo 13 créer une classe voiture possédant différentes propriétés
 
 echo "Exo 13";
 echo "<br>";
@@ -401,10 +401,10 @@ class Voiture {   // nommage des attributs de la classe
             echo "Le véhicule ". $this->getMarque(). " ". $this->getModele(). " démarre. <br>";
         }
     }
-        //!$this->estDemarrer = différent de $this->estDemarrer
+         
     public function stopper(){
-        if (!$this->estDemarrer){ // si le véhicule est à l'arrêt 
-            echo "Le véhicule ". $this->getMarque(). " ". $this->getModele(). " est déjà arreté. <br>";
+        if (!$this->estDemarrer){ // si le véhicule est à l'arrêt (!$this->estDemarrer = différent de $this->estDemarrer)
+            echo "Le véhicule ". $this->getMarque(). " ". $this->getModele(). " est déjà arreté. <br>";  
         } else {
             $this->estDemarrer = false; // sinon on arréte le véhicule
             $this->vitAc = 0;
@@ -475,7 +475,7 @@ echo "<br>";
 
 
 
-// exo 14 /
+// exo 14 reprendre l'exo précédent mais ajouter une sous classe
 
 echo "Exo 14";
 echo "<br>";
@@ -552,7 +552,7 @@ echo "<br>";
 echo "<br>";
 
 
-// exo 15 //
+// exo 15 vérifier si une adresse e-mail a le bon format
 
 echo "Exo 15";
 echo "<br>";
@@ -562,8 +562,8 @@ $email_a = 'elan@elan-formation.fr';
 $email_b = 'contact@elan';
 $url_a = 'https://www.php.net/';
 
-
-if (filter_var($email_a, FILTER_VALIDATE_EMAIL)){
+//fonction pour vérifier une adresse mail
+if (filter_var($email_a, FILTER_VALIDATE_EMAIL)){ 
     echo "L'adresse email '$email_a' est considérée comme valide.<br>";
 } else {
     echo "L'adresse email '$email_a' est considérée comme invalide.<br>";
@@ -577,6 +577,7 @@ if (filter_var($email_b, FILTER_VALIDATE_EMAIL)){
 
 echo "<br>";
 
+// fonction pour vérifier une URL
 if (filter_var($url_a, FILTER_VALIDATE_URL)){
     echo "L'adresse URL '$url_a' est considérée comme valide.<br>";
 } else {
