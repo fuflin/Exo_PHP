@@ -1,7 +1,7 @@
 <h1>Exo PHP</h1>
 <?php
 
-// exo 1 //  // utilisé une fonction pour compté le nombre de caractère d'une phrase
+//exo 1  utilisé une fonction pour compté le nombre de caractère d'une phrase
 
 echo "I). Exo 1";
 echo "<br>";
@@ -18,7 +18,7 @@ echo "<br>";
 echo "<br>";
 
 
-// exo 2 //  // utlilisé une fonction pour compté le nombre de mot dans une chaine de caractère
+//exo 2 utlilisé une fonction pour compté le nombre de mot dans une chaine de caractère
 
 echo "II). Exo 2";
 echo"<br>";
@@ -33,7 +33,7 @@ echo "<br>";
 echo "<br>";
 
 
-// exo 3 //  // remplacer un mot dans une chaine de caractère
+// exo 3  remplacer un mot dans une chaine de caractère
 
 echo "III). Exo 3";
 echo"<br>";
@@ -51,7 +51,7 @@ echo "<br>";
 echo "<br>";
 
 
-// exo 4 //  // utilisé des fonctions permettant de dire que la phrase suivante est un palindrome
+// exo 4 utilisé des fonctions permettant de dire que la phrase suivante est un palindrome
 
 echo "IV). Exo 4";
 echo"<br>";
@@ -73,7 +73,7 @@ echo "<br>";
 echo "<br>";
 
 
-// exo 5 //  // créer un convertisseur de monnaie
+// exo 5 créer un convertisseur de monnaie
 
 echo "V). Exo 5";
 echo"<br>";
@@ -96,7 +96,7 @@ echo "<br>";
 echo "<br>";
 
 
-// exo 6 //  // calculer certaines valeurs
+// exo 6 calculer certaines valeurs
 
 echo "VI). Exo 6";
 echo"<br>";
@@ -121,7 +121,7 @@ echo"<br>";
 echo"<br>";
 
 
-// exo 7 //  // classé jeune dans une catégorie
+// exo 7 classé un jeune dans une catégorie d'âge
 
 echo "VII). Exo 7";
 echo"<br>";
@@ -154,7 +154,7 @@ echo "<br>";
 echo "<br>";
 
 
-// exo 8 //  // faire une table de multiplication
+// exo 8 faire une table de multiplication
 
 echo "VIII). Exo 8";
 echo "<br>";
@@ -172,6 +172,7 @@ while($x <= 10*$y) {//valeur pour mettre fin à la boucle
   echo "$y x $z = $x <br>";
   $x+=$y; $z++;//incrémentation de la valeur de la table; + 1 pour le nombre à multiplier
 }
+
 // première variante
 
 echo "<br>";
@@ -190,6 +191,7 @@ do {
   echo "$e x $f = $d <br>";
   $d+=$e; $f++;
 } while ($d <= 10*$e);
+
 // Deuxième variante
 
 echo "<br>";
@@ -207,13 +209,14 @@ echo "<br>";
 for ($a = $b; $a <= 10*$b; $c++, $a+=$b) {
   echo "$c x $b = $a <br>";
 }
+
 //troisème variante
 
 echo "<br>";
 echo "<br>";
 
 
-// exo 9 //
+// exo 9 nous souhaitons savoir si une personne est imposable en fonction de son âge et de son sexe
 
 echo "IX). Exo 9";
 echo "<br>";
@@ -241,7 +244,7 @@ echo "<br>";
 echo "<br>";
 
 
-// Exo 10 //
+// Exo 10 A partir d'un moment à payer et d'une somme versée pour régler un achat, écrire l'algorythme qui affiche à un utilisateur un rendu de monnaie en nombre de billets de 10€, 5€, de pièces de 2€ et 1€
 
 echo "X). Exo 10";
 echo "<br>";
@@ -259,8 +262,8 @@ echo "<br>";
 
 echo "Monnaie : ", $monnaie." €";
 echo "<br>";
-
-$nbBillet10 = 0; //
+// initialisation variable
+$nbBillet10 = 0; 
 $nbBillet5 = 0;
 $nbpiece2 = 0;
 $nbpiece1 = 0;
@@ -297,7 +300,7 @@ echo "<br>";
 echo "<br>";
 
 
-// exo 11 //  // création talbeau marque
+// exo 11 création talbeau marque
 
 echo "XI). Exo 11";
 echo "<br>";
@@ -314,7 +317,7 @@ foreach ($voitures as $voiture) {
   echo "<br>";
 
 
-// exo 12 //  // classé les salutations par personnes et langue
+// exo 12 classé les salutations par personnes et langue
 
 echo "XII). Exo 12";
 echo "<br>";
@@ -350,7 +353,7 @@ $dateNaissance = "15-06-1995";
   echo "<br>";
 
   
-// exo 15 //  // création classe personne
+// exo 15 création classe personne
 
 echo "Exo 15";
 echo "<br>";
@@ -393,7 +396,7 @@ class Personne{
       $this->_date = $date;
     }
 
-    public function calculAge(){
+    public function calculAge(){ // fonction pour calculer l'âge d'une personne
       $dateNaissance = $this->getDate();
       $dateNow = new DateTime ("now");
       $diff = $dateNaissance->diff($dateNow);
